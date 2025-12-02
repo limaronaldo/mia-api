@@ -1,0 +1,31 @@
+[project]
+name = "mbras-guide-api"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12,<4"
+dependencies = [
+    "langgraph",
+    "langchain-google-vertexai",
+    "python-decouple",
+    "langchain-google-genai",
+    "fastapi[standard]",
+    "sqlalchemy[asyncio]",
+    "psycopg",
+    "psycopg-binary",
+    "langgraph-checkpoint-postgres",
+    "supabase",
+    "langchain-community",
+    "meilisearch",
+    "unidecode",
+    "geoalchemy2",
+    "sse-starlette",
+    "trustcall",
+    "langchain-openai",
+    "pyjwt",
+    "langgraph-swarm>=0.0.11",
+    "loguru>=0.7.3",
+    "aiosmtplib>=4.0.2",
+    "jinja2>=3.0.0",
+    "pycryptodome>=3.23.0",
+]

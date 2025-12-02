@@ -1,0 +1,940 @@
+{% extends "base.html" %} {% block content %}
+<!-- Welcome Header -->
+<table
+    role="presentation"
+    cellspacing="0"
+    cellpadding="0"
+    border="0"
+    width="100%"
+>
+    <tr>
+        <td style="text-align: center; padding-bottom: 30px">
+            <!-- Welcome Icon -->
+            <div
+                style="
+                    width: 80px;
+                    height: 80px;
+                    background-color: #1447e6;
+                    border-radius: 50%;
+                    margin: 0 auto 20px auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                "
+            >
+                <span style="font-size: 40px; color: white">●</span>
+            </div>
+
+            <h1
+                style="
+                    margin: 0 0 10px 0;
+                    font-size: 32px;
+                    font-weight: 700;
+                    color: #005292;
+                    line-height: 1.2;
+                "
+                class="mobile-font-lg"
+            >
+                Bem-vindo(a) à MBRAS!
+            </h1>
+
+            <p
+                style="
+                    margin: 0 0 15px 0;
+                    font-size: 20px;
+                    color: #374151;
+                    font-weight: 500;
+                "
+                class="mobile-font-md"
+            >
+                Prezado(a) {{ client_name }},
+            </p>
+
+            <p
+                style="
+                    margin: 0;
+                    font-size: 18px;
+                    color: #434b56;
+                    line-height: 1.6;
+                "
+            >
+                É com grande prazer que damos as boas-vindas ao mundo dos
+                imóveis de luxo no Rio de Janeiro. Você agora faz parte de um
+                seleto grupo de investidores que busca excelência.
+            </p>
+        </td>
+    </tr>
+</table>
+
+<!-- What Makes MBRAS Special -->
+<table
+    role="presentation"
+    cellspacing="0"
+    cellpadding="0"
+    border="0"
+    width="100%"
+    style="
+        background: linear-gradient(
+            135deg,
+            rgba(239, 246, 255, 0.8) 0%,
+            #3b82f6 100%
+        );
+        border-radius: 8px;
+        margin-bottom: 30px;
+        color: #ffffff;
+    "
+>
+    <tr>
+        <td style="padding: 30px">
+            <h2
+                style="
+                    margin: 0 0 25px 0;
+                    font-size: 24px;
+                    font-weight: 700;
+                    text-align: center;
+                    color: #ffffff;
+                "
+            >
+                Por que escolher a MBRAS?
+            </h2>
+
+            <!-- Features Grid -->
+            <table
+                role="presentation"
+                cellspacing="0"
+                cellpadding="0"
+                border="0"
+                width="100%"
+            >
+                <tr>
+                    <td
+                        style="
+                            width: 50%;
+                            padding: 0 10px 20px 0;
+                            vertical-align: top;
+                        "
+                    >
+                        <div
+                            style="
+                                background-color: rgba(255, 255, 255, 0.15);
+                                border-radius: 8px;
+                                padding: 20px;
+                                text-align: center;
+                                min-height: 120px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                            "
+                        >
+                            <div style="font-size: 32px; margin-bottom: 10px">
+                                ●
+                            </div>
+                            <h3
+                                style="
+                                    margin: 0 0 8px 0;
+                                    font-size: 16px;
+                                    font-weight: 600;
+                                    color: #ffffff;
+                                "
+                            >
+                                Propriedades Premium
+                            </h3>
+                            <p
+                                style="
+                                    margin: 0;
+                                    font-size: 14px;
+                                    color: rgba(255, 255, 255, 0.9);
+                                    line-height: 1.4;
+                                "
+                            >
+                                Acesso exclusivo aos melhores imóveis em Leblon,
+                                Ipanema e Copacabana
+                            </p>
+                        </div>
+                    </td>
+                    <td
+                        style="
+                            width: 50%;
+                            padding: 0 0 20px 10px;
+                            vertical-align: top;
+                        "
+                    >
+                        <div
+                            style="
+                                background-color: rgba(255, 255, 255, 0.15);
+                                border-radius: 8px;
+                                padding: 20px;
+                                text-align: center;
+                                min-height: 120px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                            "
+                        >
+                            <div style="font-size: 32px; margin-bottom: 10px">
+                                ●
+                            </div>
+                            <h3
+                                style="
+                                    margin: 0 0 8px 0;
+                                    font-size: 16px;
+                                    font-weight: 600;
+                                    color: #ffffff;
+                                "
+                            >
+                                Consultoria Especializada
+                            </h3>
+                            <p
+                                style="
+                                    margin: 0;
+                                    font-size: 14px;
+                                    color: rgba(255, 255, 255, 0.9);
+                                    line-height: 1.4;
+                                "
+                            >
+                                Equipe experiente para guiar você em cada etapa
+                                do investimento
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td
+                        style="
+                            width: 50%;
+                            padding: 0 10px 0 0;
+                            vertical-align: top;
+                        "
+                    >
+                        <div
+                            style="
+                                background-color: rgba(255, 255, 255, 0.15);
+                                border-radius: 8px;
+                                padding: 20px;
+                                text-align: center;
+                                min-height: 120px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                            "
+                        >
+                            <div style="font-size: 32px; margin-bottom: 10px">
+                                ●
+                            </div>
+                            <h3
+                                style="
+                                    margin: 0 0 8px 0;
+                                    font-size: 16px;
+                                    font-weight: 600;
+                                    color: #ffffff;
+                                "
+                            >
+                                Análise de Investimento
+                            </h3>
+                            <p
+                                style="
+                                    margin: 0;
+                                    font-size: 14px;
+                                    color: rgba(255, 255, 255, 0.9);
+                                    line-height: 1.4;
+                                "
+                            >
+                                Relatórios detalhados sobre potencial de
+                                valorização e retorno
+                            </p>
+                        </div>
+                    </td>
+                    <td
+                        style="
+                            width: 50%;
+                            padding: 0 0 0 10px;
+                            vertical-align: top;
+                        "
+                    >
+                        <div
+                            style="
+                                background-color: rgba(255, 255, 255, 0.15);
+                                border-radius: 8px;
+                                padding: 20px;
+                                text-align: center;
+                                min-height: 120px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                            "
+                        >
+                            <div style="font-size: 32px; margin-bottom: 10px">
+                                ●
+                            </div>
+                            <h3
+                                style="
+                                    margin: 0 0 8px 0;
+                                    font-size: 16px;
+                                    font-weight: 600;
+                                    color: #ffffff;
+                                "
+                            >
+                                Serviço Personalizado
+                            </h3>
+                            <p
+                                style="
+                                    margin: 0;
+                                    font-size: 14px;
+                                    color: rgba(255, 255, 255, 0.9);
+                                    line-height: 1.4;
+                                "
+                            >
+                                Atendimento 24/7 e acompanhamento completo do
+                                processo
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<!-- Next Steps -->
+<table
+    role="presentation"
+    cellspacing="0"
+    cellpadding="0"
+    border="0"
+    width="100%"
+    style="margin-bottom: 30px"
+>
+    <tr>
+        <td>
+            <h2
+                style="
+                    margin: 0 0 25px 0;
+                    font-size: 24px;
+                    font-weight: 600;
+                    color: #005292;
+                    text-align: center;
+                "
+            >
+                Seus Próximos Passos
+            </h2>
+
+            <!-- Step 1 -->
+            <table
+                role="presentation"
+                cellspacing="0"
+                cellpadding="0"
+                border="0"
+                width="100%"
+                style="
+                    background-color: #fcfcfc;
+                    border-radius: 8px;
+                    margin-bottom: 20px;
+                    overflow: hidden;
+                "
+            >
+                <tr>
+                    <td style="padding: 25px">
+                        <div style="display: flex; align-items: flex-start">
+                            <div
+                                style="
+                                    background-color: #1447e6;
+                                    color: #ffffff;
+                                    width: 32px;
+                                    height: 32px;
+                                    border-radius: 50%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    font-weight: 700;
+                                    font-size: 18px;
+                                    margin-right: 20px;
+                                    flex-shrink: 0;
+                                "
+                            >
+                                1
+                            </div>
+                            <div style="flex: 1">
+                                <h3
+                                    style="
+                                        margin: 0 0 8px 0;
+                                        font-size: 18px;
+                                        font-weight: 600;
+                                        color: #111827;
+                                    "
+                                >
+                                    Explore Nosso Portfólio
+                                </h3>
+                                <p
+                                    style="
+                                        margin: 0 0 15px 0;
+                                        font-size: 14px;
+                                        color: #1f1f1f;
+                                        line-height: 1.6;
+                                    "
+                                >
+                                    Navegue por nossa coleção exclusiva de
+                                    propriedades premium no Rio de Janeiro. Cada
+                                    imóvel foi cuidadosamente selecionado por
+                                    nossa equipe de especialistas.
+                                </p>
+                                <a
+                                    href="https://mbras.com/portfolio"
+                                    style="
+                                        display: inline-block;
+                                        color: #1447e6;
+                                        text-decoration: none;
+                                        font-weight: 600;
+                                        font-size: 14px;
+                                        border-bottom: 1px solid #1447e6;
+                                    "
+                                >
+                                    Ver Propriedades →
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- Step 2 -->
+            <table
+                role="presentation"
+                cellspacing="0"
+                cellpadding="0"
+                border="0"
+                width="100%"
+                style="
+                    background-color: #fcfcfc;
+                    border-radius: 8px;
+                    margin-bottom: 20px;
+                    overflow: hidden;
+                "
+            >
+                <tr>
+                    <td style="padding: 25px">
+                        <div style="display: flex; align-items: flex-start">
+                            <div
+                                style="
+                                    background-color: #1447e6;
+                                    color: #ffffff;
+                                    width: 32px;
+                                    height: 32px;
+                                    border-radius: 50%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    font-weight: 700;
+                                    font-size: 18px;
+                                    margin-right: 20px;
+                                    flex-shrink: 0;
+                                "
+                            >
+                                2
+                            </div>
+                            <div style="flex: 1">
+                                <h3
+                                    style="
+                                        margin: 0 0 8px 0;
+                                        font-size: 18px;
+                                        font-weight: 600;
+                                        color: #111827;
+                                    "
+                                >
+                                    Agende uma Consulta
+                                </h3>
+                                <p
+                                    style="
+                                        margin: 0 0 15px 0;
+                                        font-size: 14px;
+                                        color: #1f1f1f;
+                                        line-height: 1.6;
+                                    "
+                                >
+                                    Nossa equipe está pronta para uma conversa
+                                    personalizada sobre seus objetivos de
+                                    investimento e como podemos ajudar você a
+                                    alcançá-los.
+                                </p>
+                                <a
+                                    href="tel:+5521300000000"
+                                    style="
+                                        display: inline-block;
+                                        color: #1447e6;
+                                        text-decoration: none;
+                                        font-weight: 600;
+                                        font-size: 14px;
+                                        border-bottom: 1px solid #1447e6;
+                                    "
+                                >
+                                    Agendar Consulta
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- Step 3 -->
+            <table
+                role="presentation"
+                cellspacing="0"
+                cellpadding="0"
+                border="0"
+                width="100%"
+                style="
+                    background-color: #fcfcfc;
+                    border: 1px solid #f3f4f6;
+                    border-radius: 8px;
+                    overflow: hidden;
+                "
+            >
+                <tr>
+                    <td style="padding: 25px">
+                        <div style="display: flex; align-items: flex-start">
+                            <div
+                                style="
+                                    background-color: #005292;
+                                    color: #ffffff;
+                                    width: 32px;
+                                    height: 32px;
+                                    border-radius: 50%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    font-weight: 700;
+                                    font-size: 18px;
+                                    margin-right: 20px;
+                                    flex-shrink: 0;
+                                "
+                            >
+                                3
+                            </div>
+                            <div style="flex: 1">
+                                <h3
+                                    style="
+                                        margin: 0 0 8px 0;
+                                        font-size: 18px;
+                                        font-weight: 600;
+                                        color: #111827;
+                                    "
+                                >
+                                    Receba Updates Exclusivos
+                                </h3>
+                                <p
+                                    style="
+                                        margin: 0 0 15px 0;
+                                        font-size: 14px;
+                                        color: #1f1f1f;
+                                        line-height: 1.6;
+                                    "
+                                >
+                                    Mantenha-se informado sobre novos
+                                    lançamentos, oportunidades de investimento e
+                                    insights do mercado imobiliário carioca.
+                                </p>
+                                <span
+                                    style="
+                                        display: inline-flex;
+                                        align-items: center;
+                                        color: #005292;
+                                        font-weight: 600;
+                                        font-size: 14px;
+                                    "
+                                >
+                                    ✓ Você já está inscrito!
+                                </span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<!-- Exclusive Benefits -->
+<table
+    role="presentation"
+    cellspacing="0"
+    cellpadding="0"
+    border="0"
+    width="100%"
+    style="
+        background-color: #ffffff;
+        border: 1px solid #f3f4f6;
+        border-radius: 8px;
+        margin-bottom: 30px;
+    "
+>
+    <tr>
+        <td style="padding: 30px">
+            <h2
+                style="
+                    margin: 0 0 25px 0;
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #005292;
+                    text-align: center;
+                "
+            >
+                Benefícios Exclusivos para Clientes
+            </h2>
+
+            <!-- Benefits Grid -->
+            <table
+                role="presentation"
+                cellspacing="0"
+                cellpadding="0"
+                border="0"
+                width="100%"
+            >
+                <tr>
+                    <td
+                        style="
+                            width: 33.33%;
+                            padding: 15px;
+                            text-align: center;
+                            vertical-align: top;
+                        "
+                    >
+                        <div
+                            style="
+                                font-size: 32px;
+                                margin-bottom: 12px;
+                                color: #1447e6;
+                            "
+                        >
+                            ●
+                        </div>
+                        <h3
+                            style="
+                                margin: 0 0 8px 0;
+                                font-size: 14px;
+                                font-weight: 600;
+                                color: #111827;
+                            "
+                        >
+                            Acesso Prioritário
+                        </h3>
+                        <p
+                            style="
+                                margin: 0;
+                                font-size: 12px;
+                                color: #434b56;
+                                line-height: 1.4;
+                            "
+                        >
+                            Veja propriedades antes mesmo de serem anunciadas
+                            publicamente
+                        </p>
+                    </td>
+                    <td
+                        style="
+                            width: 33.33%;
+                            padding: 15px;
+                            text-align: center;
+                            vertical-align: top;
+                        "
+                    >
+                        <div
+                            style="
+                                font-size: 32px;
+                                margin-bottom: 12px;
+                                color: #1447e6;
+                            "
+                        >
+                            ●
+                        </div>
+                        <h3
+                            style="
+                                margin: 0 0 8px 0;
+                                font-size: 14px;
+                                font-weight: 600;
+                                color: #111827;
+                            "
+                        >
+                            Concierge Service
+                        </h3>
+                        <p
+                            style="
+                                margin: 0;
+                                font-size: 12px;
+                                color: #434b56;
+                                line-height: 1.4;
+                            "
+                        >
+                            Assistência completa para visitas, documentação e
+                            financiamento
+                        </p>
+                    </td>
+                    <td
+                        style="
+                            width: 33.33%;
+                            padding: 15px;
+                            text-align: center;
+                            vertical-align: top;
+                        "
+                    >
+                        <div
+                            style="
+                                font-size: 32px;
+                                margin-bottom: 12px;
+                                color: #1447e6;
+                            "
+                        >
+                            ●
+                        </div>
+                        <h3
+                            style="
+                                margin: 0 0 8px 0;
+                                font-size: 14px;
+                                font-weight: 600;
+                                color: #111827;
+                            "
+                        >
+                            Relatórios VIP
+                        </h3>
+                        <p
+                            style="
+                                margin: 0;
+                                font-size: 12px;
+                                color: #434b56;
+                                line-height: 1.4;
+                            "
+                        >
+                            Análises de mercado exclusivas e insights de
+                            investimento
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<!-- Contact Information -->
+<table
+    role="presentation"
+    cellspacing="0"
+    cellpadding="0"
+    border="0"
+    width="100%"
+    style="
+        background-color: #fcfcfc;
+        border: 1px solid #f3f4f6;
+        border-radius: 8px;
+        margin-bottom: 30px;
+    "
+>
+    <tr>
+        <td style="padding: 25px">
+            <h3
+                style="
+                    margin: 0 0 20px 0;
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: #005292;
+                    text-align: center;
+                "
+            >
+                Estamos Aqui Para Você
+            </h3>
+
+            <!-- Contact Grid -->
+            <table
+                role="presentation"
+                cellspacing="0"
+                cellpadding="0"
+                border="0"
+                width="100%"
+            >
+                <tr>
+                    <td
+                        style="
+                            width: 33.33%;
+                            padding: 10px;
+                            text-align: center;
+                            vertical-align: top;
+                        "
+                    >
+                        <div
+                            style="
+                                background-color: #1447e6;
+                                color: #ffffff;
+                                width: 40px;
+                                height: 40px;
+                                border-radius: 50%;
+                                margin: 0 auto 10px auto;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            "
+                        >
+                            <span style="font-size: 20px; color: white">●</span>
+                        </div>
+                        <p
+                            style="
+                                margin: 0 0 4px 0;
+                                font-weight: 600;
+                                font-size: 13px;
+                                color: #005292;
+                            "
+                        >
+                            Telefone
+                        </p>
+                        <a
+                            href="tel:+5521300000000"
+                            style="
+                                color: #1447e6;
+                                text-decoration: none;
+                                font-size: 12px;
+                            "
+                        >
+                            +55 21 3000-0000
+                        </a>
+                    </td>
+                    <td
+                        style="
+                            width: 33.33%;
+                            padding: 10px;
+                            text-align: center;
+                            vertical-align: top;
+                        "
+                    >
+                        <div
+                            style="
+                                background-color: #005292;
+                                color: #ffffff;
+                                width: 40px;
+                                height: 40px;
+                                border-radius: 50%;
+                                margin: 0 auto 10px auto;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            "
+                        >
+                            <span style="font-size: 20px; color: white">●</span>
+                        </div>
+                        <p
+                            style="
+                                margin: 0 0 4px 0;
+                                font-weight: 600;
+                                font-size: 13px;
+                                color: #005292;
+                            "
+                        >
+                            WhatsApp
+                        </p>
+                        <a
+                            href="https://wa.me/5521300000000"
+                            style="
+                                color: #005292;
+                                text-decoration: none;
+                                font-size: 12px;
+                            "
+                        >
+                            +55 21 3000-0000
+                        </a>
+                    </td>
+                    <td
+                        style="
+                            width: 33.33%;
+                            padding: 10px;
+                            text-align: center;
+                            vertical-align: top;
+                        "
+                    >
+                        <div
+                            style="
+                                background-color: #434b56;
+                                color: #ffffff;
+                                width: 40px;
+                                height: 40px;
+                                border-radius: 50%;
+                                margin: 0 auto 10px auto;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            "
+                        >
+                            <span style="font-size: 20px; color: white">●</span>
+                        </div>
+                        <p
+                            style="
+                                margin: 0 0 4px 0;
+                                font-weight: 600;
+                                font-size: 13px;
+                                color: #005292;
+                            "
+                        >
+                            E-mail
+                        </p>
+                        <a
+                            href="mailto:contato@mbras.com"
+                            style="
+                                color: #434b56;
+                                text-decoration: none;
+                                font-size: 12px;
+                            "
+                        >
+                            contato@mbras.com
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<!-- Final Message -->
+<table
+    role="presentation"
+    cellspacing="0"
+    cellpadding="0"
+    border="0"
+    width="100%"
+>
+    <tr>
+        <td style="text-align: center">
+            <h3
+                style="
+                    margin: 0 0 15px 0;
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #005292;
+                "
+            >
+                Obrigado por escolher a MBRAS
+            </h3>
+            <p
+                style="
+                    margin: 0 0 20px 0;
+                    font-size: 16px;
+                    color: #1f1f1f;
+                    line-height: 1.6;
+                "
+            >
+                Estamos comprometidos em oferecer uma experiência excepcional e
+                ajudar você a fazer o melhor investimento imobiliário da sua
+                vida. Juntos, vamos encontrar a propriedade dos seus sonhos no
+                coração do Rio de Janeiro.
+            </p>
+
+            <p style="margin: 0; font-size: 14px; color: #434b56">
+                <strong style="color: #1f1f1f"
+                    >Com os melhores cumprimentos,</strong
+                ><br />
+                <span style="font-weight: 600; color: #005292"
+                    >Equipe MBRAS</span
+                ><br />
+                <span
+                    style="font-size: 12px; font-style: italic; color: #434b56"
+                >
+                    Real Estate Excellence Since 2010
+                </span>
+            </p>
+        </td>
+    </tr>
+</table>
+{% endblock %}

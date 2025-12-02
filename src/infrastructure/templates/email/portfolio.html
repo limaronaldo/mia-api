@@ -1,0 +1,659 @@
+{% extends "base.html" %} {% block content %}
+<!-- Greeting Section -->
+<table
+    role="presentation"
+    cellspacing="0"
+    cellpadding="0"
+    border="0"
+    width="100%"
+>
+    <tr>
+        <td style="padding-bottom: 30px">
+            <h2
+                style="
+                    margin: 0 0 15px 0;
+                    font-size: 28px;
+                    font-weight: 700;
+                    color: #005292;
+                    line-height: 1.2;
+                "
+                class="mobile-font-lg"
+            >
+                Prezado(a) {{ client_name }},
+            </h2>
+            <p
+                style="
+                    margin: 0 0 20px 0;
+                    font-size: 16px;
+                    color: #374151;
+                    line-height: 1.6;
+                "
+            >
+                Obrigado pelo seu interesse nas propriedades MBRAS. Em anexo
+                você encontrará seu portfólio personalizado com
+                <strong style="color: #1447e6; font-weight: 600"
+                    >{{ properties_count }} propriedades exclusivas</strong
+                >
+                selecionadas especialmente para você.
+            </p>
+        </td>
+    </tr>
+</table>
+
+<!-- Portfolio Summary Card -->
+<table
+    role="presentation"
+    cellspacing="0"
+    cellpadding="0"
+    border="0"
+    width="100%"
+    style="
+        background-color: #ffffff;
+        border: 2px solid #e5e7eb;
+        border-radius: 12px;
+        margin-bottom: 30px;
+        overflow: hidden;
+    "
+>
+    <tr>
+        <td style="padding: 25px">
+            <!-- Card Header -->
+            <table
+                role="presentation"
+                cellspacing="0"
+                cellpadding="0"
+                border="0"
+                width="100%"
+            >
+                <tr>
+                    <td align="left" style="vertical-align: middle">
+                        <h3
+                            style="
+                                margin: 0;
+                                font-size: 20px;
+                                font-weight: 600;
+                                color: #005292;
+                            "
+                        >
+                            Seu Portfólio Personalizado
+                        </h3>
+                    </td>
+                    <td align="right" style="vertical-align: middle">
+                        <div
+                            style="
+                                background-color: #ededed;
+                                color: #005292;
+                                padding: 8px 16px;
+                                border-radius: 20px;
+                                font-size: 14px;
+                                font-weight: 500;
+                            "
+                        >
+                            {{ properties_count }} Propriedades
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- Statistics Grid -->
+            <table
+                role="presentation"
+                cellspacing="0"
+                cellpadding="0"
+                border="0"
+                width="100%"
+                style="margin-top: 20px"
+            >
+                <tr>
+                    <td
+                        style="
+                            width: 25%;
+                            padding: 15px;
+                            background-color: #fcfcfc;
+                            border-radius: 8px;
+                            text-align: center;
+                            vertical-align: top;
+                        "
+                    >
+                        <div
+                            style="
+                                font-size: 24px;
+                                font-weight: 700;
+                                color: #1447e6;
+                                margin-bottom: 4px;
+                            "
+                        >
+                            {{ properties_count }}
+                        </div>
+                        <div style="font-size: 12px; color: #434b56">
+                            Propriedades
+                        </div>
+                    </td>
+                    <td
+                        style="
+                            width: 25%;
+                            padding: 15px;
+                            background-color: #fcfcfc;
+                            border-radius: 8px;
+                            text-align: center;
+                            vertical-align: top;
+                        "
+                    >
+                        <div
+                            style="
+                                font-size: 24px;
+                                font-weight: 700;
+                                color: #005292;
+                                margin-bottom: 4px;
+                            "
+                        >
+                            {{ pdf_count }}
+                        </div>
+                        <div style="font-size: 12px; color: #434b56">
+                            PDFs Anexos
+                        </div>
+                    </td>
+                    <td
+                        style="
+                            width: 25%;
+                            padding: 15px;
+                            background-color: #fcfcfc;
+                            border-radius: 8px;
+                            text-align: center;
+                            vertical-align: top;
+                        "
+                    >
+                        <div
+                            style="
+                                font-size: 24px;
+                                font-weight: 700;
+                                color: #005292;
+                            "
+                        >
+                            HD
+                        </div>
+                        <div style="font-size: 12px; color: #434b56">
+                            Fotos Qualidade
+                        </div>
+                    </td>
+                    <td
+                        style="
+                            width: 25%;
+                            padding: 15px;
+                            background-color: #fcfcfc;
+                            border-radius: 8px;
+                            text-align: center;
+                            vertical-align: top;
+                        "
+                    >
+                        <div
+                            style="
+                                font-size: 24px;
+                                font-weight: 700;
+                                color: #005292;
+                            "
+                        >
+                            24h
+                        </div>
+                        <div style="font-size: 12px; color: #434b56">
+                            Resposta
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<!-- Properties List -->
+<table
+    role="presentation"
+    cellspacing="0"
+    cellpadding="0"
+    border="0"
+    width="100%"
+    style="margin-bottom: 30px"
+>
+    <tr>
+        <td>
+            <h3
+                style="
+                    margin: 0 0 20px 0;
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #005292;
+                "
+            >
+                🏠 Propriedades em seu Portfólio
+            </h3>
+
+            {% for property in properties %}
+            <!-- Property Card -->
+            <table
+                role="presentation"
+                cellspacing="0"
+                cellpadding="0"
+                border="0"
+                width="100%"
+                style="
+                    background-color: #ffffff;
+                    border: 1px solid #e5e7eb;
+                    border-radius: 12px;
+                    margin-bottom: 20px;
+                    transition: all 0.3s ease;
+                    overflow: hidden;
+                "
+            >
+                <tr>
+                    <td style="padding: 25px">
+                        <!-- Property Header -->
+                        <table
+                            role="presentation"
+                            cellspacing="0"
+                            cellpadding="0"
+                            border="0"
+                            width="100%"
+                        >
+                            <tr>
+                                <td align="left" style="vertical-align: middle">
+                                    <h4
+                                        style="
+                                            margin: 0;
+                                            font-size: 18px;
+                                            font-weight: 600;
+                                            color: #111827;
+                                        "
+                                    >
+                                        {{ property.reference }}
+                                    </h4>
+                                </td>
+                                <td
+                                    align="right"
+                                    style="vertical-align: middle"
+                                >
+                                    <div
+                                        style="
+                                            background-color: #ededed;
+                                            color: #005292;
+                                            padding: 6px 12px;
+                                            border-radius: 6px;
+                                            font-size: 14px;
+                                            font-weight: 500;
+                                        "
+                                    >
+                                        {{ property.price | currency }}
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- Address -->
+                        <p
+                            style="
+                                margin: 15px 0;
+                                font-size: 14px;
+                                color: #434b56;
+                            "
+                        >
+                            📍 {{ property.address }}
+                        </p>
+
+                        <!-- Property Details Grid -->
+                        <table
+                            role="presentation"
+                            cellspacing="0"
+                            cellpadding="0"
+                            border="0"
+                            width="100%"
+                            style="margin: 15px 0"
+                        >
+                            <tr>
+                                <td
+                                    style="
+                                        width: 33.33%;
+                                        padding: 8px 0;
+                                        font-size: 14px;
+                                        color: #434b56;
+                                    "
+                                >
+                                    📐 {{ property.area }}
+                                </td>
+                                <td
+                                    style="
+                                        width: 33.33%;
+                                        padding: 8px 0;
+                                        font-size: 14px;
+                                        color: #434b56;
+                                    "
+                                >
+                                    🛏️ {{ property.bedrooms }} Quartos
+                                </td>
+                                <td
+                                    style="
+                                        width: 33.33%;
+                                        padding: 8px 0;
+                                        font-size: 14px;
+                                        color: #434b56;
+                                    "
+                                >
+                                    🚿 {{ property.bathrooms }} Banheiros
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- Description -->
+                        <p
+                            style="
+                                margin: 15px 0;
+                                font-size: 14px;
+                                color: #1f1f1f;
+                                line-height: 1.6;
+                            "
+                        >
+                            {{ property.description }}
+                        </p>
+
+                        <!-- Property Footer -->
+                        <table
+                            role="presentation"
+                            cellspacing="0"
+                            cellpadding="0"
+                            border="0"
+                            width="100%"
+                            style="
+                                border-top: 1px solid #f3f4f6;
+                                padding-top: 15px;
+                                margin-top: 15px;
+                            "
+                        >
+                            <tr>
+                                <td align="left" style="vertical-align: middle">
+                                    <span
+                                        style="
+                                            font-size: 12px;
+                                            color: #005292;
+                                            font-weight: 500;
+                                        "
+                                    >
+                                        ✅ PDF Anexo Disponível
+                                    </span>
+                                </td>
+                                <td
+                                    align="right"
+                                    style="vertical-align: middle"
+                                >
+                                    <span
+                                        style="
+                                            font-size: 12px;
+                                            color: #1447e6;
+                                            font-weight: 500;
+                                        "
+                                    >
+                                        REF: {{ property.reference }}
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            {% endfor %}
+        </td>
+    </tr>
+</table>
+
+<!-- Features Highlight -->
+<table
+    role="presentation"
+    cellspacing="0"
+    cellpadding="0"
+    border="0"
+    width="100%"
+    style="
+        background: linear-gradient(
+            135deg,
+            rgba(239, 246, 255, 0.8) 0%,
+            #3b82f6 100%
+        );
+        border-radius: 12px;
+        margin-bottom: 30px;
+        color: #ffffff;
+    "
+>
+    <tr>
+        <td style="padding: 30px">
+            <h3
+                style="
+                    margin: 0 0 20px 0;
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #ffffff;
+                "
+            >
+                O que está incluído em cada propriedade:
+            </h3>
+
+            <!-- Features Grid -->
+            <table
+                role="presentation"
+                cellspacing="0"
+                cellpadding="0"
+                border="0"
+                width="100%"
+            >
+                <tr>
+                    <td style="width: 50%; padding: 8px 0; vertical-align: top">
+                        <div
+                            style="
+                                display: flex;
+                                align-items: center;
+                                margin-bottom: 10px;
+                            "
+                        >
+                            ✓
+                            <span style="margin-left: 10px; font-size: 14px"
+                                >Apresentações profissionais em PDF</span
+                            >
+                        </div>
+                    </td>
+                    <td style="width: 50%; padding: 8px 0; vertical-align: top">
+                        <div
+                            style="
+                                display: flex;
+                                align-items: center;
+                                margin-bottom: 10px;
+                            "
+                        >
+                            ✓
+                            <span style="margin-left: 10px; font-size: 14px"
+                                >Fotos HD e tours virtuais</span
+                            >
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 50%; padding: 8px 0; vertical-align: top">
+                        <div
+                            style="
+                                display: flex;
+                                align-items: center;
+                                margin-bottom: 10px;
+                            "
+                        >
+                            ✓
+                            <span style="margin-left: 10px; font-size: 14px"
+                                >Especificações detalhadas</span
+                            >
+                        </div>
+                    </td>
+                    <td style="width: 50%; padding: 8px 0; vertical-align: top">
+                        <div
+                            style="
+                                display: flex;
+                                align-items: center;
+                                margin-bottom: 10px;
+                            "
+                        >
+                            ✓
+                            <span style="margin-left: 10px; font-size: 14px"
+                                >Destaques do bairro</span
+                            >
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 50%; padding: 8px 0; vertical-align: top">
+                        <div
+                            style="
+                                display: flex;
+                                align-items: center;
+                                margin-bottom: 10px;
+                            "
+                        >
+                            ✓
+                            <span style="margin-left: 10px; font-size: 14px"
+                                >Análise de investimento</span
+                            >
+                        </div>
+                    </td>
+                    <td style="width: 50%; padding: 8px 0; vertical-align: top">
+                        <div
+                            style="
+                                display: flex;
+                                align-items: center;
+                                margin-bottom: 10px;
+                            "
+                        >
+                            ✓
+                            <span style="margin-left: 10px; font-size: 14px"
+                                >Contato direto para visitas</span
+                            >
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<!-- Call to Action -->
+<table
+    role="presentation"
+    cellspacing="0"
+    cellpadding="0"
+    border="0"
+    width="100%"
+    style="
+        background-color: #ffffff;
+        border: 1px solid #f3f4f6;
+        border-radius: 12px;
+        margin-bottom: 30px;
+    "
+>
+    <tr>
+        <td style="padding: 30px; text-align: center">
+            <h3
+                style="
+                    margin: 0 0 15px 0;
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #005292;
+                "
+            >
+                Próximos Passos
+            </h3>
+            <p
+                style="
+                    margin: 0 0 25px 0;
+                    font-size: 16px;
+                    color: #1f1f1f;
+                    line-height: 1.6;
+                "
+            >
+                Nossa equipe entrará em contato em até 24 horas para discutir
+                agendamentos de visitas e esclarecer qualquer dúvida.
+            </p>
+
+            <!-- Action Buttons -->
+            <table
+                role="presentation"
+                cellspacing="0"
+                cellpadding="0"
+                border="0"
+                width="100%"
+            >
+                <tr>
+                    <td align="center" style="padding: 0 5px">
+                        <a
+                            href="tel:+5521300000000"
+                            style="
+                                display: inline-block;
+                                background-color: #1447e6;
+                                color: #ffffff;
+                                text-decoration: none;
+                                padding: 14px 24px;
+                                border-radius: 6px;
+                                font-weight: 600;
+                                font-size: 14px;
+                                margin: 5px;
+                            "
+                        >
+                            Ligar Agora
+                        </a>
+                    </td>
+                    <td align="center" style="padding: 0 5px">
+                        <a
+                            href="https://wa.me/5521300000000"
+                            style="
+                                display: inline-block;
+                                background-color: #005292;
+                                color: #ffffff;
+                                text-decoration: none;
+                                padding: 14px 24px;
+                                border-radius: 6px;
+                                font-weight: 600;
+                                font-size: 14px;
+                                margin: 5px;
+                            "
+                        >
+                            WhatsApp
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<!-- Thank You Message -->
+<table
+    role="presentation"
+    cellspacing="0"
+    cellpadding="0"
+    border="0"
+    width="100%"
+>
+    <tr>
+        <td style="text-align: center">
+            <p
+                style="
+                    margin: 0 0 20px 0;
+                    font-size: 16px;
+                    color: #1f1f1f;
+                    line-height: 1.6;
+                "
+            >
+                Agradecemos novamente o seu interesse nas propriedades MBRAS.
+                Estamos ansiosos para ajudá-lo a encontrar o imóvel dos seus
+                sonhos.
+            </p>
+            <p style="margin: 0; font-size: 14px; color: #434b56">
+                <strong style="color: #1f1f1f">Atenciosamente,</strong><br />
+                <span style="font-weight: 600; color: #005292"
+                    >Equipe MBRAS</span
+                >
+            </p>
+        </td>
+    </tr>
+</table>
+{% endblock %}

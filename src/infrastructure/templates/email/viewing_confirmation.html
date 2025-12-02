@@ -1,0 +1,788 @@
+{% extends "base.html" %} {% block content %}
+<!-- Confirmation Header -->
+<table
+    role="presentation"
+    cellspacing="0"
+    cellpadding="0"
+    border="0"
+    width="100%"
+>
+    <tr>
+        <td style="text-align: center; padding-bottom: 30px">
+            <!-- Success Badge -->
+            <div
+                style="
+                    background-color: #ededed;
+                    color: #005292;
+                    display: inline-block;
+                    padding: 12px 24px;
+                    border-radius: 25px;
+                    font-size: 14px;
+                    font-weight: 600;
+                    margin-bottom: 20px;
+                "
+            >
+                ✓ Visita Confirmada!
+            </div>
+
+            <h2
+                style="
+                    margin: 0 0 15px 0;
+                    font-size: 28px;
+                    font-weight: 700;
+                    color: #005292;
+                    line-height: 1.2;
+                "
+                class="mobile-font-lg"
+            >
+                Prezado(a) {{ client_name }},
+            </h2>
+
+            <p
+                style="
+                    margin: 0;
+                    font-size: 16px;
+                    color: #374151;
+                    line-height: 1.6;
+                "
+            >
+                Sua visita à propriedade foi
+                <strong style="color: #005292; font-weight: 600"
+                    >confirmada com sucesso</strong
+                >! Estamos ansiosos para apresentar esta oportunidade exclusiva.
+            </p>
+        </td>
+    </tr>
+</table>
+
+<!-- Appointment Details Card -->
+<table
+    role="presentation"
+    cellspacing="0"
+    cellpadding="0"
+    border="0"
+    width="100%"
+    style="
+        background-color: #ffffff;
+        border: 1px solid #f3f4f6;
+        border-radius: 8px;
+        margin-bottom: 30px;
+        overflow: hidden;
+    "
+>
+    <tr>
+        <td style="padding: 25px">
+            <!-- Card Header -->
+            <table
+                role="presentation"
+                cellspacing="0"
+                cellpadding="0"
+                border="0"
+                width="100%"
+            >
+                <tr>
+                    <td align="left" style="vertical-align: middle">
+                        <h3
+                            style="
+                                margin: 0;
+                                font-size: 20px;
+                                font-weight: 600;
+                                color: #005292;
+                            "
+                        >
+                            📅 Detalhes da Visita
+                        </h3>
+                    </td>
+                    <td align="right" style="vertical-align: middle">
+                        <div
+                            style="
+                                background-color: #ededed;
+                                color: #005292;
+                                padding: 8px 16px;
+                                border-radius: 20px;
+                                font-size: 12px;
+                                font-weight: 500;
+                            "
+                        >
+                            {{ appointment_id }}
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- Details Grid -->
+            <table
+                role="presentation"
+                cellspacing="0"
+                cellpadding="0"
+                border="0"
+                width="100%"
+                style="margin-top: 25px"
+            >
+                <tr>
+                    <!-- Property Information -->
+                    <td
+                        style="
+                            width: 50%;
+                            padding-right: 15px;
+                            vertical-align: top;
+                        "
+                    >
+                        <!-- Property -->
+                        <div style="margin-bottom: 20px">
+                            <div
+                                style="
+                                    display: flex;
+                                    align-items: flex-start;
+                                    margin-bottom: 8px;
+                                "
+                            >
+                                <span style="margin-right: 8px; font-size: 18px"
+                                    >🏠</span
+                                >
+                                <div>
+                                    <p
+                                        style="
+                                            margin: 0 0 4px 0;
+                                            font-weight: 600;
+                                            color: #111827;
+                                            font-size: 14px;
+                                        "
+                                    >
+                                        Propriedade
+                                    </p>
+                                    <p
+                                        style="
+                                            margin: 0;
+                                            color: #434b56;
+                                            font-size: 14px;
+                                        "
+                                    >
+                                        {{ property_reference }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Address -->
+                        <div style="margin-bottom: 20px">
+                            <div
+                                style="
+                                    display: flex;
+                                    align-items: flex-start;
+                                    margin-bottom: 8px;
+                                "
+                            >
+                                <span style="margin-right: 8px; font-size: 18px"
+                                    >📍</span
+                                >
+                                <div>
+                                    <p
+                                        style="
+                                            margin: 0 0 4px 0;
+                                            font-weight: 600;
+                                            color: #111827;
+                                            font-size: 14px;
+                                        "
+                                    >
+                                        Endereço
+                                    </p>
+                                    <p
+                                        style="
+                                            margin: 0;
+                                            color: #434b56;
+                                            font-size: 14px;
+                                            line-height: 1.4;
+                                        "
+                                    >
+                                        {{ property_address }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+
+                    <!-- Date and Time Information -->
+                    <td
+                        style="
+                            width: 50%;
+                            padding-left: 15px;
+                            vertical-align: top;
+                        "
+                    >
+                        <!-- Date -->
+                        <div style="margin-bottom: 20px">
+                            <div
+                                style="
+                                    display: flex;
+                                    align-items: flex-start;
+                                    margin-bottom: 8px;
+                                "
+                            >
+                                <span style="margin-right: 8px; font-size: 18px"
+                                    >📅</span
+                                >
+                                <div>
+                                    <p
+                                        style="
+                                            margin: 0 0 4px 0;
+                                            font-weight: 600;
+                                            color: #111827;
+                                            font-size: 14px;
+                                        "
+                                    >
+                                        Data
+                                    </p>
+                                    <p
+                                        style="
+                                            margin: 0;
+                                            color: #005292;
+                                            font-size: 14px;
+                                            font-weight: 600;
+                                        "
+                                    >
+                                        {{ viewing_date }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Time -->
+                        <div style="margin-bottom: 20px">
+                            <div
+                                style="
+                                    display: flex;
+                                    align-items: flex-start;
+                                    margin-bottom: 8px;
+                                "
+                            >
+                                <span style="margin-right: 8px; font-size: 18px"
+                                    >⏰</span
+                                >
+                                <div>
+                                    <p
+                                        style="
+                                            margin: 0 0 4px 0;
+                                            font-weight: 600;
+                                            color: #111827;
+                                            font-size: 14px;
+                                        "
+                                    >
+                                        Horário
+                                    </p>
+                                    <p
+                                        style="
+                                            margin: 0;
+                                            color: #005292;
+                                            font-size: 14px;
+                                            font-weight: 600;
+                                        "
+                                    >
+                                        {{ viewing_time }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<!-- Important Instructions -->
+<table
+    role="presentation"
+    cellspacing="0"
+    cellpadding="0"
+    border="0"
+    width="100%"
+    style="
+        background: linear-gradient(
+            135deg,
+            rgba(239, 246, 255, 0.8) 0%,
+            #3b82f6 100%
+        );
+        border-radius: 8px;
+        margin-bottom: 30px;
+        color: #ffffff;
+    "
+>
+    <tr>
+        <td style="padding: 30px">
+            <h3
+                style="
+                    margin: 0 0 20px 0;
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #ffffff;
+                "
+            >
+                ⚠️ Instruções Importantes
+            </h3>
+
+            <!-- Instructions Grid -->
+            <table
+                role="presentation"
+                cellspacing="0"
+                cellpadding="0"
+                border="0"
+                width="100%"
+            >
+                <tr>
+                    <td style="width: 50%; padding: 8px 0; vertical-align: top">
+                        <div
+                            style="
+                                display: flex;
+                                align-items: flex-start;
+                                margin-bottom: 15px;
+                            "
+                        >
+                            <span style="margin-right: 10px; font-size: 16px"
+                                >•</span
+                            >
+                            <span style="font-size: 14px; line-height: 1.4">
+                                Chegue <strong>5 minutos antes</strong> do
+                                horário agendado
+                            </span>
+                        </div>
+                    </td>
+                    <td style="width: 50%; padding: 8px 0; vertical-align: top">
+                        <div
+                            style="
+                                display: flex;
+                                align-items: flex-start;
+                                margin-bottom: 15px;
+                            "
+                        >
+                            <span style="margin-right: 10px; font-size: 16px"
+                                >•</span
+                            >
+                            <span style="font-size: 14px; line-height: 1.4">
+                                Traga documento de
+                                <strong>identificação</strong>
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 50%; padding: 8px 0; vertical-align: top">
+                        <div
+                            style="
+                                display: flex;
+                                align-items: flex-start;
+                                margin-bottom: 15px;
+                            "
+                        >
+                            <span style="margin-right: 10px; font-size: 16px"
+                                >•</span
+                            >
+                            <span style="font-size: 14px; line-height: 1.4">
+                                Use roupas e
+                                <strong>calçados confortáveis</strong>
+                            </span>
+                        </div>
+                    </td>
+                    <td style="width: 50%; padding: 8px 0; vertical-align: top">
+                        <div
+                            style="
+                                display: flex;
+                                align-items: flex-start;
+                                margin-bottom: 15px;
+                            "
+                        >
+                            <span style="margin-right: 10px; font-size: 16px"
+                                >•</span
+                            >
+                            <span style="font-size: 14px; line-height: 1.4">
+                                Sinta-se à vontade para
+                                <strong>fazer perguntas</strong>
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<!-- What to Expect -->
+<table
+    role="presentation"
+    cellspacing="0"
+    cellpadding="0"
+    border="0"
+    width="100%"
+    style="
+        background-color: #ffffff;
+        border: 1px solid #f3f4f6;
+        border-radius: 8px;
+        margin-bottom: 30px;
+    "
+>
+    <tr>
+        <td style="padding: 25px">
+            <h3
+                style="
+                    margin: 0 0 20px 0;
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #005292;
+                "
+            >
+                🎯 O que esperar da visita
+            </h3>
+
+            <!-- Expectations Grid -->
+            <table
+                role="presentation"
+                cellspacing="0"
+                cellpadding="0"
+                border="0"
+                width="100%"
+            >
+                <tr>
+                    <td style="width: 50%; padding: 8px 0; vertical-align: top">
+                        <div
+                            style="
+                                display: flex;
+                                align-items: flex-start;
+                                margin-bottom: 15px;
+                            "
+                        >
+                            <span
+                                style="
+                                    margin-right: 10px;
+                                    color: #1447e6;
+                                    font-size: 16px;
+                                "
+                                >✓</span
+                            >
+                            <div>
+                                <p
+                                    style="
+                                        margin: 0 0 4px 0;
+                                        font-weight: 600;
+                                        font-size: 14px;
+                                        color: #111827;
+                                    "
+                                >
+                                    Tour completo da propriedade
+                                </p>
+                                <p
+                                    style="
+                                        margin: 0;
+                                        color: #434b56;
+                                        font-size: 13px;
+                                        line-height: 1.4;
+                                    "
+                                >
+                                    Visitaremos todos os cômodos e áreas
+                                </p>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="width: 50%; padding: 8px 0; vertical-align: top">
+                        <div
+                            style="
+                                display: flex;
+                                align-items: flex-start;
+                                margin-bottom: 15px;
+                            "
+                        >
+                            <span
+                                style="
+                                    margin-right: 10px;
+                                    color: #1447e6;
+                                    font-size: 16px;
+                                "
+                                >✓</span
+                            >
+                            <div>
+                                <p
+                                    style="
+                                        margin: 0 0 4px 0;
+                                        font-weight: 600;
+                                        font-size: 14px;
+                                        color: #111827;
+                                    "
+                                >
+                                    Informações detalhadas
+                                </p>
+                                <p
+                                    style="
+                                        margin: 0;
+                                        color: #434b56;
+                                        font-size: 13px;
+                                        line-height: 1.4;
+                                    "
+                                >
+                                    Especificações técnicas e características
+                                </p>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 50%; padding: 8px 0; vertical-align: top">
+                        <div
+                            style="
+                                display: flex;
+                                align-items: flex-start;
+                                margin-bottom: 15px;
+                            "
+                        >
+                            <span
+                                style="
+                                    margin-right: 10px;
+                                    color: #1447e6;
+                                    font-size: 16px;
+                                "
+                                >✓</span
+                            >
+                            <div>
+                                <p
+                                    style="
+                                        margin: 0 0 4px 0;
+                                        font-weight: 600;
+                                        font-size: 14px;
+                                        color: #111827;
+                                    "
+                                >
+                                    Contexto do bairro
+                                </p>
+                                <p
+                                    style="
+                                        margin: 0;
+                                        color: #434b56;
+                                        font-size: 13px;
+                                        line-height: 1.4;
+                                    "
+                                >
+                                    Comodidades e serviços locais
+                                </p>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="width: 50%; padding: 8px 0; vertical-align: top">
+                        <div
+                            style="
+                                display: flex;
+                                align-items: flex-start;
+                                margin-bottom: 15px;
+                            "
+                        >
+                            <span
+                                style="
+                                    margin-right: 10px;
+                                    color: #1447e6;
+                                    font-size: 16px;
+                                "
+                                >✓</span
+                            >
+                            <div>
+                                <p
+                                    style="
+                                        margin: 0 0 4px 0;
+                                        font-weight: 600;
+                                        font-size: 14px;
+                                        color: #111827;
+                                    "
+                                >
+                                    Análise de investimento
+                                </p>
+                                <p
+                                    style="
+                                        margin: 0;
+                                        color: #434b56;
+                                        font-size: 13px;
+                                        line-height: 1.4;
+                                    "
+                                >
+                                    Potencial de valorização e retorno
+                                </p>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<!-- Contact and Changes -->
+<table
+    role="presentation"
+    cellspacing="0"
+    cellpadding="0"
+    border="0"
+    width="100%"
+    style="
+        background-color: #fcfcfc;
+        border-left: 4px solid #1447e6;
+        border-radius: 8px;
+        margin-bottom: 30px;
+    "
+>
+    <tr>
+        <td style="padding: 25px">
+            <div style="display: flex; align-items: flex-start">
+                <span
+                    style="margin-right: 15px; font-size: 24px; color: #1447e6"
+                    >⚠</span
+                >
+                <div style="flex: 1">
+                    <h4
+                        style="
+                            margin: 0 0 10px 0;
+                            font-weight: 600;
+                            color: #001b41;
+                            font-size: 16px;
+                        "
+                    >
+                        Precisa fazer alterações?
+                    </h4>
+                    <p
+                        style="
+                            margin: 0 0 20px 0;
+                            color: #005292;
+                            font-size: 14px;
+                            line-height: 1.5;
+                        "
+                    >
+                        Se você precisar reagendar ou cancelar sua visita, entre
+                        em contato conosco com pelo menos 2 horas de
+                        antecedência.
+                    </p>
+
+                    <!-- Contact Buttons -->
+                    <table
+                        role="presentation"
+                        cellspacing="0"
+                        cellpadding="0"
+                        border="0"
+                        width="100%"
+                    >
+                        <tr>
+                            <td style="padding: 0 5px">
+                                <a
+                                    href="tel:+5521300000000"
+                                    style="
+                                        display: inline-block;
+                                        background-color: #1447e6;
+                                        color: #ffffff;
+                                        text-decoration: none;
+                                        padding: 12px 18px;
+                                        border-radius: 6px;
+                                        font-weight: 600;
+                                        font-size: 13px;
+                                        margin: 3px;
+                                    "
+                                    >Ligar</a
+                                >
+                            </td>
+                            <td style="padding: 0 5px">
+                                <a
+                                    href="https://wa.me/5521300000000"
+                                    style="
+                                        display: inline-block;
+                                        background-color: #005292;
+                                        color: #ffffff;
+                                        text-decoration: none;
+                                        padding: 12px 18px;
+                                        border-radius: 6px;
+                                        font-weight: 600;
+                                        font-size: 13px;
+                                        margin: 3px;
+                                    "
+                                    >WhatsApp</a
+                                >
+                            </td>
+                            <td style="padding: 0 5px">
+                                <a
+                                    href="mailto:contato@mbras.com"
+                                    style="
+                                        display: inline-block;
+                                        background-color: #434b56;
+                                        color: #ffffff;
+                                        text-decoration: none;
+                                        padding: 12px 18px;
+                                        border-radius: 6px;
+                                        font-weight: 600;
+                                        font-size: 13px;
+                                        margin: 3px;
+                                    "
+                                    >Email</a
+                                >
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<!-- Thank You Message -->
+<table
+    role="presentation"
+    cellspacing="0"
+    cellpadding="0"
+    border="0"
+    width="100%"
+>
+    <tr>
+        <td style="text-align: center">
+            <div
+                style="
+                    width: 64px;
+                    height: 64px;
+                    background-color: #ededed;
+                    border-radius: 50%;
+                    margin: 0 auto 20px auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                "
+            >
+                <span style="font-size: 32px; color: #1447e6">●</span>
+            </div>
+
+            <h3
+                style="
+                    margin: 0 0 15px 0;
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: #005292;
+                "
+            >
+                Estamos ansiosos para recebê-lo(a)!
+            </h3>
+
+            <p
+                style="
+                    margin: 0 0 20px 0;
+                    font-size: 16px;
+                    color: #1f1f1f;
+                    line-height: 1.6;
+                "
+            >
+                Nossa equipe especializada estará presente para apresentar todos
+                os detalhes desta propriedade exclusiva e responder todas as
+                suas perguntas sobre este investimento excepcional.
+            </p>
+
+            <p style="margin: 0; font-size: 14px; color: #434b56">
+                <strong style="color: #1f1f1f">Atenciosamente,</strong><br />
+                <span style="font-weight: 600; color: #005292"
+                    >Equipe MBRAS</span
+                ><br />
+                <span
+                    style="font-size: 12px; font-style: italic; color: #434b56"
+                    >Real Estate Excellence</span
+                >
+            </p>
+        </td>
+    </tr>
+</table>
+{% endblock %}
